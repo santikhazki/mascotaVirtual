@@ -1,0 +1,71 @@
+import Mascota.*
+import hambrienta.*
+import contenta.*
+import Aburrida.*
+
+describe "group of tests" {
+	var mascota1
+	var mascota2
+	var mascota3
+	var mascota4
+	var aburrida1
+	var aburrida2
+	
+	fixture{
+		
+		aburrida1 = new Aburrida(56)
+		aburrida2 = new Aburrida(100)
+		
+		mascota1 = new Mascota(0,hambrienta)
+		mascota2 = new Mascota(5,contenta)
+		mascota3 = new Mascota(10,aburrida1)
+		mascota4 = new Mascota(10,aburrida2)			
+	}
+	
+	test "Una mascota hambrienta come" {
+		
+		mascota1.comer()
+		assert.equals(contenta,mascota1.estado())
+
+	}
+	
+	test "Una mascota contenta come"{
+	
+		mascota2.comer()
+		assert.equals(6,mascota2.nivel())
+	}
+	
+	test "Una mascota aburrida hace mas de 80 minutos come"{
+	
+		mascota4.comer()
+		assert.equals(contenta,mascota4.estado())
+	}
+	
+	test "Una mascota aburrida hace menos de 80 minutos come"{
+	
+		mascota3.comer()
+		assert.equals(aburrida1,mascota3.estado())
+		assert.equals(10,mascota3.nivel())
+	}
+	
+	test "Una mascota contenta juega"{
+	
+		mascota2.jugar()
+		assert.equals(7,mascota2.nivel())
+	}
+	
+	test "Una mascota aburrida juega"{
+	
+		mascota3.jugar()
+		assert.equals(contenta,mascota3.estado())
+	}
+	
+	test "Una mascota hambrienta juega"{
+	
+		assert.throwsException({ mascota1.jugar() })
+		
+	}
+	
+	
+	
+}
