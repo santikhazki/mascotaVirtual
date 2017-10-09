@@ -8,7 +8,7 @@ object hambrienta{
 	}
 	
 	method jugar(unaMascota){
-		self.error("La mascota no puede jugar")
+		// no hace nada!!
 	}
 	
 	method puedeJugar(){
