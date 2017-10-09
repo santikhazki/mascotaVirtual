@@ -17,12 +17,12 @@ class Aburrida{
 	
 	method comer(unaMascota){
 		if(tiempoDeAburrimiento > 80){
-			 unaMascota.modificarEstado(contenta)
+			 unaMascota.estado(contenta)
 		}
 	}
 	
 	method jugar(unaMascota){
-		unaMascota.modificarEstado(contenta)
+		unaMascota.estado(contenta)
 	}
 
 }

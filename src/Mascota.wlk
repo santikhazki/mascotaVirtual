@@ -22,10 +22,6 @@ class Mascota {
 		return nivel
 	}
 	
-	method modificarEstado(unEstado){
-		self.estado(unEstado)
-	}
-	
 	method aumentarNivel(unaCantidad){
 		nivel += unaCantidad
 	}

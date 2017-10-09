@@ -1,6 +1,0 @@
-
-class NoPuedeJugar inherits Exception {
-
-
-
-}

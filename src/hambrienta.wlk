@@ -3,7 +3,7 @@ import contenta.*
 object hambrienta{
 	
 	method comer(unaMascota){
-		unaMascota.modificarEstado(contenta)
+		unaMascota.estado(contenta)
 		
 	}
 	
