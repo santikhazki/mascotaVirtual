@@ -31,7 +31,15 @@ class Mascota {
 	}
 	
 	method jugar(){	
-		estado.jugar(self)
+		if(self.puedeJugar()){
+			estado.jugar(self)
+		}
+		else
+		self.error("La mascota no puede jugar")
+	}
+	
+	method puedeJugar(){
+		return estado.puedeJugar()
 	}
 }
 

@@ -8,5 +8,9 @@ object contenta {
 	method jugar(unaMascota){
 		 unaMascota.aumentarNivel(2)
 	}
+	
+	method puedeJugar(){
+		return true
+	}
 
 }

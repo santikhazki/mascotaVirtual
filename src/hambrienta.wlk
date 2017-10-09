@@ -11,5 +11,9 @@ object hambrienta{
 		self.error("La mascota no puede jugar")
 	}
 	
+	method puedeJugar(){
+		return false
+	}
+	
 	
 }

@@ -24,5 +24,9 @@ class Aburrida{
 	method jugar(unaMascota){
 		unaMascota.estado(contenta)
 	}
+	
+	method puedeJugar(){
+		return true
+	}
 
 }
